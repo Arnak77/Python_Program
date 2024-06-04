@@ -1,0 +1,10 @@
+with open("Student2","r") as fp:
+    print("File open with Read mode...")
+    print("File name:",fp.name)
+    print("File mode:",fp.mode)
+    print("File Readeable:",fp.readable())
+    print("File Writeable:",fp.writable())
+    print("File closed:",fp.closed)
+    print("*"*50)
+print("Out Of Read Files")
+print("File closed:", fp.closed)
