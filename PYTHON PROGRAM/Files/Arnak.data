@@ -1,0 +1,27 @@
+100
+KVR
+11.11
+Arnak Jian
+World Richest Person..
+India
+believe yourself...
+with open("Student2","r") as fp:
+    print("File open with Read mode...")
+    print("File name:",fp.name)
+    print("File mode:",fp.mode)
+    print("File Readeable:",fp.readable())
+    print("File Writeable:",fp.writable())
+    print("File closed:",fp.closed)
+    print("*"*50)
+print("Out Of Read Files")
+print("File closed:", fp.closed)
+scrfile=input("Enter source file: ")
+try:
+    with open(scrfile,"r") as rp:
+        dsfile=input("destinaction file:")
+        with open(dsfile,"a") as wp:
+            scrfile=rp.read()
+            wp.write(scrfile)
+            print("Data is copy...")
+except FileNotFoundError:
+    print("Plz Valid File Name....")
